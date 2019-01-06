@@ -1,8 +1,15 @@
 workspace:
-  base: /test
+  base: /front
   path: src/github.com/Howard21432134/Drone_test
 pipeline:
   build:
     image: node:latest
     commands:
-      - echo "start build..."
+      - npm install
+      - npm run serve
+  publish:
+    image:plugins/docker
+    repo:Howard21432134/Drone_test
+    tags:["latest","v2"]
+    secrets:[docker_username,docker_password]
+    dockerfile:Dockerfile
