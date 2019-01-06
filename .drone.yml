@@ -6,7 +6,7 @@ pipeline:
     image: node:latest
     commands:
       - npm install
-      - npm run build
+      - npm run serve
   publish:
     image: nginx:latest
     repo: Howard21432134/Drone_test
