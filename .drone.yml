@@ -6,9 +6,9 @@ pipeline:
     image: node:latest
     commands:
       - npm install
-      - npm run-script build
+      - npm run build
   publish:
-    image: node:latest
+    image: nginx:latest
     repo: Howard21432134/Drone_test
     tags: ["latest","v2"]
     secrets: [docker_username,docker_password]
