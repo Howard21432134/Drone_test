@@ -11,5 +11,5 @@ pipeline:
     image: node:latest
     repo: Howard21432134/Drone_test
     tags:["latest","v2"]
-    secrets:[docker_username,docker_password]
+    secrets: [docker_username,docker_password]
     dockerfile:Dockerfile
