@@ -1,0 +1,8 @@
+workspace:
+  base: /test
+  path: src/github.com/Howard21432134/Drone_test
+pipeline:
+  build:
+    image: node:latest
+    commands:
+      - echo "start build..."
